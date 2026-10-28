@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "defaultActionId": "web",
+  "actions": [
+    {
+      "id": "web",
+      "name": "Three Lab",
+      "command": "npm run dev",
+      "cwd": ".",
+      "background": true,
+      "source": "agent",
+      "readiness": {
+        "outputPatterns": ["Local:"],
+        "timeoutMs": 60000
+      },
+      "open": {
+        "type": "preview",
+        "url": "http://127.0.0.1:5173/",
+        "urlFromOutput": true
+      }
+    }
+  ]
+}
